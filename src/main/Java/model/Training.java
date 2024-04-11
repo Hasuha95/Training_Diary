@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @EqualsAndHashCode
@@ -13,11 +13,11 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Training {
     private String name;
-    private LocalDate date;
+    private LocalDateTime date;
     private long durationInMinutes;
     private TypeOfTraining type;
     private long calories;
-    private int cycle;
-    private int set;
+    private int cycles;
+    private int sets;
 
 }

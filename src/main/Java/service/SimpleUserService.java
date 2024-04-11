@@ -1,6 +1,7 @@
 package service;
 
 import model.DiaryUser;
+import model.Training;
 import repository.InMemoryUserRepository;
 import repository.UserRepository;
 
@@ -20,6 +21,11 @@ public class SimpleUserService implements UserService{
     @Override
     public void createNewUser(DiaryUser user) {
         repository.saveUser(user);
+    }
+
+    @Override
+    public void addNewTraining(Training training) {
+
     }
 }
 

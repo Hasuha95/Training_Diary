@@ -8,12 +8,11 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class InMemoryUserRepository implements UserRepository{
+    private Map<String,DiaryUser> map;
 
     public InMemoryUserRepository() {
         this.map = new HashMap<>();
     }
-
-    private Map<String,DiaryUser> map;
 
     @Override
     public void saveUser(final DiaryUser user) {
