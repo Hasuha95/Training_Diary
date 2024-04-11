@@ -1,4 +1,4 @@
-package model;
+package main_package.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,8 +7,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TypeOfTraining {
     private String name;
-
     public TypeOfTraining(String type) {
         this.name = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Type of training: " +
+                "name= " + "\'" + name + "\'";
     }
 }

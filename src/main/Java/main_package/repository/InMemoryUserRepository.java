@@ -1,6 +1,6 @@
-package repository;
+package main_package.repository;
 
-import model.DiaryUser;
+import main_package.model.SimpleDiaryUser;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,19 +8,19 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class InMemoryUserRepository implements UserRepository{
-    private Map<String,DiaryUser> map;
+    private Map<String, SimpleDiaryUser> map;
 
     public InMemoryUserRepository() {
         this.map = new HashMap<>();
     }
 
     @Override
-    public void saveUser(final DiaryUser user) {
+    public void saveUser(final SimpleDiaryUser user) {
         map.put(user.getUserName(), user);
     }
 
     @Override
-    public DiaryUser findUserByUserName(final String userName) {
+    public SimpleDiaryUser findUserByUserName(final String userName) {
         if (userName == null){
             throw new IllegalArgumentException("userName can't be null");
         }
@@ -28,7 +28,7 @@ public class InMemoryUserRepository implements UserRepository{
     }
 
     @Override
-    public List<DiaryUser> findAllUsers() {
+    public List<SimpleDiaryUser> findAllUsers() {
         return map.values().stream().collect(Collectors.toList());
     }
 

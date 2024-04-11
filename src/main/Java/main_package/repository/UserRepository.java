@@ -1,15 +1,15 @@
-package repository;
+package main_package.repository;
 
-import model.DiaryUser;
+import main_package.model.SimpleDiaryUser;
 
 import java.util.List;
 
 public interface UserRepository {
     //    Содержит методы для сохранения,
 //    получения и обновления информации о пользователях.
-    void saveUser(final DiaryUser user);
-    DiaryUser findUserByUserName(final String userName);
-    List<DiaryUser> findAllUsers();
+    void saveUser(final SimpleDiaryUser user);
+    SimpleDiaryUser findUserByUserName(final String userName);
+    List<SimpleDiaryUser> findAllUsers();
     void deleteUserByUserName(final String userName);
 
 }

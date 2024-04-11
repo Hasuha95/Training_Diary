@@ -1,6 +1,6 @@
-package repository;
+package main_package.repository;
 
-import model.TypeOfTraining;
+import main_package.model.TypeOfTraining;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,16 @@ public class InMemoryTypeOfTrainingRepository implements TypeOfTrainingRepositor
 
     @Override
     public TypeOfTraining findTypeOfTrainingByName(String name) {
+        for (TypeOfTraining t : list) {
+            if (t.getName().equals(name)){
+                return t;
+            }
+        }
         return null;
+    }
+
+    @Override
+    public List<TypeOfTraining> getAll() {
+        return list;
     }
 }
