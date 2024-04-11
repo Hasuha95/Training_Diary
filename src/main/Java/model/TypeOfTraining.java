@@ -1,10 +1,13 @@
 package model;
 
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-@Getter
+@Data
+@NoArgsConstructor
 public class TypeOfTraining {
-    private final String name;
+    private String name;
 
     public TypeOfTraining(String type) {
         this.name = type;

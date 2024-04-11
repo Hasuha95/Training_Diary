@@ -1,8 +1,8 @@
 package service;
 
-public class UserService {
-//    Реализует функции регистрации, авторизации и контроля прав доступа.
+import model.DiaryUser;
 
+public interface UserService {
+    DiaryUser getUserByUserName(String userName);
+    void createNewUser(DiaryUser user);
 }
-
-
